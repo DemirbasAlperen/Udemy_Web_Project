@@ -1,0 +1,165 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    /* html içerisine atadığınız font-size mobil uyumludur. Bunu en altta tablet ve pc için responsive olarak ayarladık. */
+    font-size: 7px;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    /* satırlar arası boşluğu line-height ile ayarladık*/
+    text-align: center;
+    background-color: #333;
+}
+
+a {
+    text-decoration: none;
+    /* link altındaki çizgiyi kaldırdık */
+}
+
+p {
+    padding: 1.6rem 0;
+    /* paragrafın padding değerini üstten ve alttan 1.6 rem, sağdan ve soldan 0 olacak şekilde ayarladık.  */
+}
+
+img {
+    width: 100%;
+    /* resimde yüksekliği en boy oranı bozulmaması için auto verdik. */
+    height: auto;
+
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header {
+    height: 46rem;
+}
+
+header .bg-image {
+    /* görsel pozisyonunu ayaryadık ve yazı ile bg üst üste bindi */
+    position: absolute;
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    /* görseli cover ile kapsayıcı olarak ayarladık */
+    background-position: center;
+    /* görsel pozisyonunu center ile merkezden konumladık */
+    width: 100%;
+    height: 46rem;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+header h1 {
+    padding: 12rem;
+    padding-bottom: 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    border: 1px solid #666;
+    padding: 1.6rem 3.2rem;
+    margin: 0.5rem 0; 
+    transition: all 0.4s; 
+    /* transition ile buton üzerine geldiğimizde hover değişim hızını ayarladık */
+}
+
+.btn:hover {
+    /* üzerine geldiğimizde yazı ve kutunun ne renk olacağını ayarladık. */
+    background-color: #fff;
+    color: #333;
+}
+
+#section-a {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 3.2rem 0;
+}
+
+#section-b {
+    /* görsellerin kenara tam yapışmaması için padding verdik */
+    padding: 2rem;
+}
+
+#section-b ul {
+    list-style: none;
+    /* burada listelerin madde imlerini kaldırmak için list-style: none; yaptık */
+}
+
+#section-b li {
+    /* kartların arka plan ve yazı rengini ayarladık. */
+    background: #fff;
+    color: #333;   
+    margin-bottom: 1.5rem;
+}
+
+.col-content { 
+    /* resim ile başlıklar arasına boşluk verdik. */
+    padding: 1.5rem;
+}
+
+#section-c {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 5rem;
+}
+
+#section-d .box {
+    padding: 5rem; 
+}
+
+#section-d .box:first-child {
+    /* burada section-d id si içerisinde box clasına sahip ilk elemanı(first-child) seçtik */
+    background-color: darkslategray;
+}
+
+footer {
+    padding: 4rem;
+    background: black;
+}
+
+footer a {
+    color: yellowgreen;
+}
+
+@media screen and (min-width:800px) {
+
+    /* tablet boyutu için sadece font-size ayarı yaptık */
+    html {
+        font-size: 9px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* pc boyutu için font-size ayarlandı ve kartların pc boyutunda yan yana gelmesi ayarlandı. */
+    html {
+        font-size: 11px;
+    }
+
+    #section-b li{
+        width: 20%;
+        margin: 1%;
+        display: inline-block;
+
+    }
+
+    .box {
+        width: 50%;
+        float: left;
+    }
+}
